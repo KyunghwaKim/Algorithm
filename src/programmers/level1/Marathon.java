@@ -22,8 +22,8 @@ public class Marathon {
 	}
 
 	public static void main(String[] args) {
-		String[] a = { "mislav", "stanko", "mislav", "ana" };
-		String[] b = { "stanko", "ana", "mislav" };
+		String[] a = {"mislav", "stanko", "mislav", "ana"};
+		String[] b = {"stanko", "ana", "mislav"};
 		System.out.println(solution(a, b));
 	}
 }
