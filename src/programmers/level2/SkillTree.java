@@ -25,6 +25,8 @@ class Solution {
 
 					if (skillT.length() - 1 == j) answer++;
 				}
+				
+				//if(skill.indexOf(skillT)==0) answer++;
 			}
 		}
 
