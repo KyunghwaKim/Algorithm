@@ -5,12 +5,12 @@ public class LandGame {
 	public static void main(String[] args) {
 		int[][] land = { { 1, 2, 3, 5 }, { 5, 6, 7, 8 }, { 4, 3, 2, 1 } };
 
-		Solution sol = new Solution();
+		Solution2 sol = new Solution2();
 		System.out.println(sol.solution(land));
 	}
 }
 
-class Solution {
+class Solution2 {
 	int sumMethod(int target, int[][] land) {
 		int result = target;
 		int[] first = new int[land.length];
