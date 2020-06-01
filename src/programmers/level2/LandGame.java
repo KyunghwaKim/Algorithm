@@ -12,15 +12,22 @@ public class LandGame {
 
 class Solution2 {
 	int sumMethod(int target, int[][] land) {
-		int result = target;
+		int result = 0;
 		int[] first = new int[land.length];
+		int location = 0;
 
 		for (int i = 1; i < land.length; i++) {
 			for (int j = 0; j < land[i].length; j++) {
 				if (j != target && first[i] < land[i][j]) {
 					first[i] = land[i][j];
-					target = j;
+					if (i == 1)
+						location = j;
+					else
+						target = j;
 				}
+
+				if (i == 1 && j == land[i].length - 1)
+					target = location;
 			}
 			result += first[i];
 		}
@@ -33,6 +40,7 @@ class Solution2 {
 
 		for (int i = 0; i < land[0].length; i++) {
 			result = sumMethod(i, land);
+			result += land[0][i];
 			if (answer < result) {
 				answer = result;
 			}
